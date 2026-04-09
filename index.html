@@ -3,952 +3,1017 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Manual da Mulher Inesquecível</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>Manual da Mulher Inesquecível — Transforme Sua Vida Amorosa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --rosa: #C8174A;
-    --rosa-claro: #F7D6E0;
-    --vinho: #7B0D2A;
-    --dourado: #C9932A;
-    --creme: #FFF8F0;
-    --escuro: #1A0A10;
-    --cinza: #6B5860;
-  }
-
-  body {
-    font-family: 'Nunito', sans-serif;
-    background: var(--escuro);
-    color: #fff;
-    max-width: 480px;
-    margin: 0 auto;
-    overflow-x: hidden;
-  }
-
-  /* HERO */
-  .hero {
-    background: linear-gradient(160deg, #1A0A10 0%, #3D0A1E 50%, #1A0A10 100%);
-    padding: 0 20px 40px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: -60px; left: -60px;
-    width: 200px; height: 200px;
-    border-radius: 50%;
-    background: rgba(200,23,74,0.15);
-  }
-
-  .hero::after {
-    content: '';
-    position: absolute;
-    bottom: -40px; right: -40px;
-    width: 160px; height: 160px;
-    border-radius: 50%;
-    background: rgba(201,147,42,0.1);
-  }
-
-  .tag-top {
-    display: inline-block;
-    background: var(--rosa);
-    color: #fff;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 8px 20px;
-    border-radius: 0 0 16px 16px;
-    margin-bottom: 28px;
-  }
-
-  .hero-pretitulo {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--dourado);
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 14px;
-  }
-
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 38px;
-    font-weight: 900;
-    line-height: 1.1;
-    color: #fff;
-    margin-bottom: 10px;
-  }
-
-  .hero h1 em {
-    color: var(--rosa);
-    font-style: italic;
-  }
-
-  .hero-sub {
-    font-size: 16px;
-    font-weight: 600;
-    color: #FFBFD0;
-    margin-bottom: 28px;
-    line-height: 1.5;
-  }
-
-  .book-visual {
-    width: 200px;
-    height: 260px;
-    margin: 0 auto 28px;
-    position: relative;
-    z-index: 1;
-  }
-
-  .book-visual svg {
-    width: 100%;
-    height: 100%;
-    filter: drop-shadow(0 20px 40px rgba(200,23,74,0.5));
-  }
-
-  /* PROBLEMA */
-  .section-problema {
-    background: #fff;
-    color: var(--escuro);
-    padding: 40px 24px;
-  }
-
-  .section-problema h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 26px;
-    font-weight: 700;
-    color: var(--vinho);
-    text-align: center;
-    line-height: 1.3;
-    margin-bottom: 24px;
-  }
-
-  .dor-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 16px;
-    padding: 14px 16px;
-    background: #FFF0F4;
-    border-radius: 12px;
-    border-left: 3px solid var(--rosa);
-  }
-
-  .dor-icon {
-    font-size: 20px;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-
-  .dor-item p {
-    font-size: 14px;
-    font-weight: 600;
-    color: #2A0A14;
-    line-height: 1.5;
-  }
-
-  /* SOLUCAO */
-  .section-solucao {
-    background: linear-gradient(135deg, var(--vinho), #3D0A1E);
-    padding: 40px 24px;
-    text-align: center;
-  }
-
-  .section-solucao h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    color: #fff;
-    line-height: 1.3;
-    margin-bottom: 10px;
-  }
-
-  .section-solucao h2 span {
-    color: var(--dourado);
-  }
-
-  .solucao-sub {
-    font-size: 15px;
-    color: #FFBFD0;
-    margin-bottom: 32px;
-    line-height: 1.6;
-  }
-
-  /* MODULOS */
-  .modulo-card {
-    background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 14px;
-    padding: 18px 16px;
-    margin-bottom: 14px;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-
-  .modulo-num {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: var(--rosa);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    font-weight: 900;
-    flex-shrink: 0;
-    color: #fff;
-  }
-
-  .modulo-texto strong {
-    display: block;
-    font-size: 14px;
-    font-weight: 800;
-    color: #fff;
-    margin-bottom: 4px;
-  }
-
-  .modulo-texto p {
-    font-size: 12px;
-    color: #FFBFD0;
-    line-height: 1.4;
-  }
-
-  /* BONUS */
-  .section-bonus {
-    background: #fff;
-    padding: 40px 24px;
-  }
-
-  .bonus-tag {
-    display: inline-block;
-    background: var(--dourado);
-    color: #fff;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 6px 18px;
-    border-radius: 50px;
-    margin-bottom: 20px;
-  }
-
-  .section-bonus h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 26px;
-    color: var(--vinho);
-    line-height: 1.3;
-    margin-bottom: 24px;
-  }
-
-  .bonus-item {
-    display: flex;
-    gap: 14px;
-    align-items: flex-start;
-    margin-bottom: 18px;
-    padding-bottom: 18px;
-    border-bottom: 1px solid #F0DCE4;
-  }
-
-  .bonus-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-  }
-
-  .bonus-icon-wrap {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    background: #FFF0F4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    flex-shrink: 0;
-  }
-
-  .bonus-info strong {
-    display: block;
-    font-size: 14px;
-    font-weight: 800;
-    color: var(--escuro);
-    margin-bottom: 4px;
-  }
-
-  .bonus-info p {
-    font-size: 13px;
-    color: var(--cinza);
-    line-height: 1.5;
-  }
-
-  .bonus-valor {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--rosa);
-    margin-top: 4px;
-  }
-
-  /* PROVA SOCIAL */
-  .section-prova {
-    background: #1A0A10;
-    padding: 40px 24px;
-  }
-
-  .section-prova h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    color: #fff;
-    text-align: center;
-    margin-bottom: 24px;
-  }
-
-  .depo-card {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 14px;
-    padding: 18px 16px;
-    margin-bottom: 14px;
-  }
-
-  .depo-stars {
-    color: var(--dourado);
-    font-size: 14px;
-    margin-bottom: 8px;
-    letter-spacing: 2px;
-  }
-
-  .depo-texto {
-    font-size: 13px;
-    color: #FFD6E7;
-    line-height: 1.6;
-    margin-bottom: 12px;
-    font-style: italic;
-  }
-
-  .depo-nome {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--dourado);
-  }
-
-  /* GARANTIA */
-  .section-garantia {
-    background: #fff;
-    padding: 40px 24px;
-    text-align: center;
-  }
-
-  .garantia-badge {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--vinho), var(--rosa));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    font-size: 36px;
-  }
-
-  .section-garantia h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    color: var(--vinho);
-    margin-bottom: 12px;
-  }
-
-  .section-garantia p {
-    font-size: 14px;
-    color: var(--cinza);
-    line-height: 1.7;
-  }
-
-  /* OFERTA */
-  .section-oferta {
-    background: linear-gradient(160deg, #2D0414 0%, #1A0A10 100%);
-    padding: 40px 24px;
-    text-align: center;
-  }
-
-  .oferta-titulo {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    color: #fff;
-    margin-bottom: 24px;
-    line-height: 1.4;
-  }
-
-  .oferta-box {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(200,23,74,0.4);
-    border-radius: 20px;
-    padding: 28px 20px;
-    margin-bottom: 24px;
-  }
-
-  .de-por {
-    font-size: 13px;
-    color: #FFBFD0;
-    margin-bottom: 6px;
-  }
-
-  .de-por s {
-    color: #FF8FAD;
-  }
-
-  .preco-principal {
-    font-family: 'Playfair Display', serif;
-    font-size: 58px;
-    font-weight: 900;
-    color: #fff;
-    line-height: 1;
-    margin-bottom: 6px;
-  }
-
-  .preco-principal sup {
-    font-size: 24px;
-    vertical-align: super;
-  }
-
-  .preco-descricao {
-    font-size: 13px;
-    color: #FFBFD0;
-    margin-bottom: 20px;
-  }
-
-  .itens-oferta {
-    text-align: left;
-    margin-bottom: 20px;
-  }
-
-  .item-oferta {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    font-size: 13px;
-    color: #FFD6E7;
-    font-weight: 600;
-  }
-
-  .check-icon {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--rosa);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    font-size: 11px;
-  }
-
-  .btn-comprar {
-    display: block;
-    width: 100%;
-    background: linear-gradient(135deg, var(--rosa), #E8194E);
-    color: #fff;
-    font-family: 'Nunito', sans-serif;
-    font-size: 18px;
-    font-weight: 900;
-    text-align: center;
-    padding: 18px 24px;
-    border-radius: 50px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    letter-spacing: 0.5px;
-    box-shadow: 0 8px 30px rgba(200,23,74,0.5);
-    transition: transform 0.1s, box-shadow 0.1s;
-    margin-bottom: 14px;
-  }
-
-  .btn-comprar:active {
-    transform: scale(0.97);
-    box-shadow: 0 4px 20px rgba(200,23,74,0.4);
-  }
-
-  .btn-subtexto {
-    font-size: 12px;
-    color: #FFBFD0;
-    margin-bottom: 6px;
-  }
-
-  .pagamento-icons {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    font-size: 11px;
-    color: #CC8099;
-    flex-wrap: wrap;
-    margin-top: 10px;
-  }
-
-  .pag-badge {
-    background: rgba(255,255,255,0.08);
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-weight: 700;
-  }
-
-  /* URGENCIA */
-  .section-urgencia {
-    background: var(--rosa);
-    padding: 20px 24px;
-    text-align: center;
-  }
-
-  .urgencia-texto {
-    font-size: 13px;
-    font-weight: 800;
-    color: #fff;
-    letter-spacing: 0.5px;
-  }
-
-  .urgencia-texto strong {
-    display: block;
-    font-size: 16px;
-    margin-bottom: 4px;
-  }
-
-  /* FAQ */
-  .section-faq {
-    background: #0E0608;
-    padding: 40px 24px;
-  }
-
-  .section-faq h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    color: #fff;
-    text-align: center;
-    margin-bottom: 24px;
-  }
-
-  .faq-item {
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    padding: 16px 0;
-    cursor: pointer;
-  }
-
-  .faq-pergunta {
-    font-size: 14px;
-    font-weight: 700;
-    color: #FFBFD0;
-    padding-right: 24px;
-    position: relative;
-    line-height: 1.4;
-  }
-
-  .faq-pergunta::after {
-    content: '+';
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 20px;
-    color: var(--rosa);
-    font-weight: 400;
-    transition: transform 0.2s;
-  }
-
-  .faq-item.open .faq-pergunta::after {
-    transform: rotate(45deg);
-  }
-
-  .faq-resposta {
-    font-size: 13px;
-    color: #CC8099;
-    line-height: 1.6;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
-  }
-
-  .faq-item.open .faq-resposta {
-    max-height: 200px;
-    padding-top: 10px;
-  }
-
-  /* FOOTER */
-  .footer {
-    background: #0A0306;
-    padding: 24px;
-    text-align: center;
-  }
-
-  .footer p {
-    font-size: 11px;
-    color: #5A3A47;
-    line-height: 1.7;
-    margin-bottom: 6px;
-  }
-
-  /* FLOATING BTN */
-  .floating-cta {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 480px;
-    background: linear-gradient(135deg, var(--vinho), #1A0A10);
-    padding: 14px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    z-index: 999;
-    border-top: 1px solid rgba(200,23,74,0.3);
-  }
-
-  .floating-preco {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    color: #fff;
-    font-weight: 900;
-    white-space: nowrap;
-  }
-
-  .floating-preco span {
-    font-size: 12px;
-    color: #FFBFD0;
-    display: block;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 600;
-  }
-
-  .floating-btn {
-    flex: 1;
-    background: var(--rosa);
-    color: #fff;
-    font-family: 'Nunito', sans-serif;
-    font-size: 15px;
-    font-weight: 900;
-    text-align: center;
-    padding: 14px 16px;
-    border-radius: 50px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 20px rgba(200,23,74,0.5);
-    white-space: nowrap;
-  }
-
-  /* PULSE ANIMATION */
-  @keyframes pulse-ring {
-    0% { box-shadow: 0 0 0 0 rgba(200,23,74,0.6), 0 8px 30px rgba(200,23,74,0.5); }
-    70% { box-shadow: 0 0 0 14px rgba(200,23,74,0), 0 8px 30px rgba(200,23,74,0.5); }
-    100% { box-shadow: 0 0 0 0 rgba(200,23,74,0), 0 8px 30px rgba(200,23,74,0.5); }
-  }
-
-  .btn-comprar { animation: pulse-ring 2.4s infinite; }
-
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .hero h1, .hero-sub, .book-visual { animation: fadeInUp 0.6s ease both; }
-  .hero h1 { animation-delay: 0.1s; }
-  .hero-sub { animation-delay: 0.25s; }
-  .book-visual { animation-delay: 0.05s; }
+/* ══ RESET ══════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --r:#C0143F; --rd:#900E2E; --rl:rgba(192,20,63,.1);
+  --v:#5C0A1E; --v2:#3D0614;
+  --ouro:#B8902A; --ouro-l:#F5EDD6;
+  --preto:#08030A; --escuro:#110509; --escuro2:#1C0810;
+  --creme:#FBF7F2; --branco:#FFFFFF;
+  --txt:#1A0810; --txt2:#6B3045; --txt3:#A07080;
+  --ff-titulo: 'Playfair Display', Georgia, serif;
+  --ff-corpo: 'Nunito', system-ui, sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--ff-corpo); background: var(--creme); color: var(--txt); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+/* ══ TIMER BAR ═══════════════════════════════════ */
+.timer-bar {
+  background: var(--preto);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.timer-text { font-size: 12px; font-weight: 700; color: rgba(255,255,255,.7); letter-spacing: .5px; }
+.timer-units { display: flex; gap: 6px; align-items: center; }
+.timer-unit {
+  display: flex; flex-direction: column; align-items: center;
+  background: var(--r); border-radius: 6px;
+  padding: 5px 10px; min-width: 44px;
+}
+.timer-num { font-size: 20px; font-weight: 900; color: #fff; line-height: 1; }
+.timer-lbl { font-size: 8px; font-weight: 700; color: rgba(255,255,255,.65); letter-spacing: 1px; text-transform: uppercase; }
+.timer-sep { font-size: 18px; font-weight: 900; color: var(--r); line-height: 1; }
+.timer-tag { background: var(--r); color: #fff; font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 10px; border-radius: 50px; }
+
+/* ══ HERO ════════════════════════════════════════ */
+.hero {
+  background: var(--escuro);
+  position: relative; overflow: hidden;
+  padding: 64px 0 72px;
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(192,20,63,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(192,20,63,.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+.hero-glow {
+  position: absolute; top: 40%; left: 50%; transform: translate(-50%,-50%);
+  width: 700px; height: 500px;
+  background: radial-gradient(ellipse, rgba(192,20,63,.16), transparent 65%);
+  pointer-events: none;
+}
+.hero-inner { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; padding: 0 22px; text-align: center; }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(184,144,42,.12);
+  border: 1px solid rgba(184,144,42,.3);
+  border-radius: 50px;
+  padding: 7px 18px;
+  font-size: 11px; font-weight: 700; color: var(--ouro);
+  letter-spacing: 1.5px; text-transform: uppercase;
+  margin-bottom: 28px;
+}
+.hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ouro); animation: blink-dot 1.5s infinite; }
+@keyframes blink-dot { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+.hero-pretitle {
+  font-size: 13px; font-weight: 700; color: rgba(255,255,255,.45);
+  letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px;
+}
+
+.hero-h1 {
+  font-family: var(--ff-titulo);
+  font-size: clamp(42px, 11vw, 68px);
+  font-weight: 900; line-height: 1.06;
+  color: #fff; margin-bottom: 16px; letter-spacing: -1px;
+}
+.hero-h1 em { font-style: italic; color: var(--r); }
+
+.hero-sub {
+  font-size: 17px; font-weight: 500; color: rgba(255,255,255,.6);
+  line-height: 1.65; margin-bottom: 40px; max-width: 480px; margin-left: auto; margin-right: auto;
+}
+.hero-sub strong { color: rgba(255,255,255,.9); font-weight: 700; }
+
+/* Capa livro */
+.book-cover {
+  width: 170px; margin: 0 auto 40px;
+  filter: drop-shadow(0 28px 56px rgba(192,20,63,.55));
+  animation: float-book 4s ease-in-out infinite;
+}
+@keyframes float-book { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+
+/* Estrelas hero */
+.hero-stars { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 28px; }
+.stars-emojis { font-size: 16px; color: var(--ouro); letter-spacing: 2px; }
+.stars-text { font-size: 13px; color: rgba(255,255,255,.55); }
+
+.cta-main {
+  display: block; width: 100%; max-width: 420px; margin: 0 auto;
+  background: linear-gradient(135deg, var(--r) 0%, #E0184A 100%);
+  color: #fff; font-family: var(--ff-corpo); font-size: 17px; font-weight: 900;
+  letter-spacing: .5px; padding: 20px 28px; border-radius: 6px; border: none;
+  cursor: pointer; text-align: center; text-decoration: none;
+  box-shadow: 0 8px 32px rgba(192,20,63,.55);
+  animation: pulse-glow 2.5s infinite;
+  transition: transform .15s, box-shadow .15s;
+}
+@keyframes pulse-glow {
+  0%,100%{box-shadow:0 8px 32px rgba(192,20,63,.55)}
+  50%{box-shadow:0 8px 48px rgba(192,20,63,.8)}
+}
+.cta-main:hover { transform: translateY(-2px); }
+
+.cta-safe { font-size: 12px; color: rgba(255,255,255,.35); margin-top: 10px; text-align: center; }
+
+/* ══ PROVA SOCIAL RÁPIDA ════════════════════════ */
+.social-strip {
+  background: var(--v2); border-top: 1px solid rgba(192,20,63,.2); border-bottom: 1px solid rgba(192,20,63,.2);
+  padding: 20px 22px;
+}
+.social-strip-inner {
+  max-width: 640px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap;
+}
+.social-stat { text-align: center; }
+.social-stat .num { font-size: 24px; font-weight: 900; color: #fff; display: block; line-height: 1; }
+.social-stat .lbl { font-size: 11px; color: rgba(255,255,255,.45); letter-spacing: .5px; }
+.social-divider { width: 1px; height: 36px; background: rgba(255,255,255,.1); }
+
+/* ══ SEÇÕES BASE ═════════════════════════════════ */
+.s-branco  { background: var(--branco); padding: 72px 0; }
+.s-creme   { background: var(--creme); padding: 72px 0; }
+.s-escuro  { background: var(--escuro); padding: 72px 0; }
+.s-escuro2 { background: var(--escuro2); padding: 72px 0; }
+.s-vinho   { background: var(--v); padding: 72px 0; }
+
+.container { max-width: 640px; margin: 0 auto; padding: 0 22px; }
+
+.sec-badge {
+  display: inline-block; font-size: 10px; font-weight: 800;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--ouro);
+  padding: 5px 14px; border: 1px solid rgba(184,144,42,.3);
+  border-radius: 50px; background: rgba(184,144,42,.07);
+  margin-bottom: 14px;
+}
+.sec-badge.light { color: rgba(255,255,255,.5); border-color: rgba(255,255,255,.15); background: transparent; }
+
+.sec-titulo {
+  font-family: var(--ff-titulo); font-size: clamp(30px, 7vw, 44px);
+  font-weight: 700; line-height: 1.15; margin-bottom: 10px;
+}
+.sec-titulo em { font-style: italic; color: var(--r); }
+.sec-titulo.light { color: #fff; }
+.sec-titulo.light em { color: var(--r); }
+
+.sec-sub { font-size: 15px; color: var(--txt2); line-height: 1.7; margin-bottom: 40px; }
+.sec-sub.light { color: rgba(255,255,255,.5); }
+
+.sec-head { text-align: center; margin-bottom: 48px; }
+
+/* ══ DIVISOR ════════════════════════════════════ */
+.div-row { display: flex; align-items: center; gap: 12px; margin: 40px 0; }
+.div-row::before, .div-row::after { content:''; flex:1; height:1px; background:linear-gradient(90deg,transparent,rgba(192,20,63,.25),transparent); }
+.div-diamond { width:8px; height:8px; background:var(--r); transform:rotate(45deg); flex-shrink:0; }
+
+/* ══ ILUSTRAÇÃO EMOCIONAL — SECTION HERO DOR ════ */
+.emotion-section { background: var(--escuro); padding: 80px 0; overflow: hidden; position: relative; }
+.emotion-section::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 500px 400px at 50% 30%, rgba(192,20,63,.1), transparent 70%); }
+
+.emotion-grid { display: flex; flex-direction: column; gap: 16px; position: relative; z-index:1; }
+.emotion-card {
+  display: flex; align-items: flex-start; gap: 18px;
+  border: 1px solid rgba(255,255,255,.06);
+  border-left: 3px solid var(--r);
+  border-radius: 6px; padding: 20px 22px;
+  background: rgba(255,255,255,.03);
+  transition: background .2s, border-color .2s, transform .2s;
+}
+.emotion-card:hover { background:rgba(192,20,63,.06); border-left-color: #E8194E; transform: translateX(4px); }
+.ec-icon { width:42px; height:42px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:19px; }
+.ec-icon.red { background:rgba(192,20,63,.15); }
+.ec-text { padding-top:6px; }
+.ec-text strong { display:block; font-size:14px; font-weight:800; color:#fff; margin-bottom:4px; }
+.ec-text p { font-size:13px; color:rgba(255,255,255,.5); line-height:1.6; }
+
+/* Reveal box */
+.reveal-block {
+  background: var(--preto);
+  border: 1px solid rgba(192,20,63,.25);
+  border-radius: 8px; padding: 40px 32px; text-align:center;
+  position:relative; overflow:hidden; margin-top: 40px;
+}
+.reveal-block::before { content:''; position:absolute; top:-60px; left:50%; transform:translateX(-50%); width:300px; height:200px; background:radial-gradient(ellipse, rgba(192,20,63,.15), transparent 70%); }
+.reveal-block p { font-family:var(--ff-titulo); font-size:clamp(18px,4.5vw,25px); font-style:italic; font-weight:400; color:rgba(255,255,255,.8); line-height:1.55; position:relative; z-index:1; }
+.reveal-block p strong { color:var(--r); font-style:normal; font-weight:900; }
+.reveal-block p em { color:var(--ouro); }
+
+/* ══ O QUE ESTÁ INCLUÍDO — CARDS PRODUTO ════════ */
+.product-showcase {
+  display: flex; flex-direction:column; gap: 20px;
+}
+
+.product-card {
+  border-radius: 10px; overflow: hidden;
+  border: 1px solid rgba(192,20,63,.12);
+  background: var(--branco);
+  box-shadow: 0 4px 24px rgba(0,0,0,.07);
+}
+
+.product-card-header {
+  background: linear-gradient(135deg, var(--v), var(--v2));
+  padding: 24px 24px 20px;
+  display: flex; align-items: center; gap: 16px;
+}
+.pch-icon {
+  width: 54px; height: 54px; border-radius: 12px;
+  background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15);
+  display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0;
+}
+.pch-info strong { display:block; font-size:16px; font-weight:800; color:#fff; margin-bottom:4px; }
+.pch-info span { font-size:12px; color:rgba(255,255,255,.5); }
+.product-card-body { padding: 22px 24px; }
+.product-card-body p { font-size:14px; color:var(--txt2); line-height:1.65; margin-bottom:16px; }
+
+.feature-list { list-style:none; display:flex; flex-direction:column; gap:9px; }
+.feature-list li { display:flex; align-items:flex-start; gap:10px; font-size:13px; color:var(--txt); line-height:1.5; }
+.feat-check { width:20px; height:20px; border-radius:50%; background:var(--r); display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px; }
+.feat-check svg { width:10px; height:10px; stroke:#fff; stroke-width:2.5; fill:none; }
+
+/* App preview illustration */
+.app-preview {
+  background: var(--escuro); border-radius: 8px; padding: 20px;
+  display: flex; align-items: center; gap: 18px; margin-top: 18px;
+  border: 1px solid rgba(192,20,63,.2);
+}
+.app-screen {
+  width: 80px; height: 130px; background: var(--preto);
+  border-radius: 12px; border: 1.5px solid rgba(192,20,63,.3);
+  flex-shrink: 0; overflow: hidden; position: relative;
+}
+.app-screen-inner { padding: 8px 6px; }
+.app-bar { height: 5px; background: var(--r); border-radius: 3px; margin-bottom: 6px; }
+.app-item { height: 9px; background: rgba(255,255,255,.12); border-radius: 3px; margin-bottom: 4px; }
+.app-item.short { width: 70%; }
+.app-item.accent { background: rgba(192,20,63,.4); }
+.app-dots { display:flex; gap:3px; margin-top:8px; justify-content:center; }
+.app-dot { width:5px; height:5px; border-radius:50%; background:rgba(255,255,255,.15); }
+.app-dot.on { background:var(--r); }
+.app-info strong { display:block; font-size:13px; font-weight:800; color:#fff; margin-bottom:4px; }
+.app-info p { font-size:12px; color:rgba(255,255,255,.5); line-height:1.55; }
+.app-badge { display:inline-block; font-size:10px; font-weight:800; color:var(--ouro); background:rgba(184,144,42,.12); border-radius:50px; padding:3px 10px; margin-top:7px; letter-spacing:.5px; }
+
+/* ══ APP DESTAQUE ════════════════════════════════ */
+.app-highlight {
+  background: linear-gradient(135deg, var(--v2), var(--preto));
+  border: 1px solid rgba(192,20,63,.3); border-radius: 12px;
+  padding: 36px 28px; text-align:center; overflow:hidden; position:relative;
+}
+.app-highlight::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 400px 300px at 50% 0%, rgba(192,20,63,.12), transparent 70%); }
+.app-highlight-inner { position:relative; z-index:1; }
+.app-phone-mock {
+  width: 180px; height: 310px; background: var(--preto);
+  border-radius: 28px; border: 2px solid rgba(192,20,63,.4);
+  margin: 0 auto 28px; overflow:hidden; position:relative;
+  box-shadow: 0 24px 60px rgba(192,20,63,.35);
+}
+.apm-header { background:var(--v); padding:12px 14px; display:flex; align-items:center; gap:8px; }
+.apm-logo { width:22px; height:22px; background:var(--r); border-radius:6px; flex-shrink:0; }
+.apm-title { width:60px; height:8px; background:rgba(255,255,255,.5); border-radius:4px; }
+.apm-content { padding:12px; display:flex; flex-direction:column; gap:8px; }
+.apm-card { background:rgba(192,20,63,.2); border-radius:6px; padding:10px; }
+.apm-card-t { height:6px; background:rgba(255,255,255,.5); border-radius:3px; margin-bottom:6px; width:80%; }
+.apm-card-b { height:5px; background:rgba(255,255,255,.25); border-radius:3px; width:60%; }
+.apm-msg { background:var(--r); border-radius:6px; padding:10px; }
+.apm-msg-line { height:5px; background:rgba(255,255,255,.7); border-radius:3px; margin-bottom:5px; }
+.apm-msg-line:last-child { width:60%; }
+.apm-nav { position:absolute; bottom:0; left:0; right:0; background:var(--v2); padding:8px 14px; display:flex; justify-content:space-between; }
+.apm-nav-item { width:28px; height:4px; background:rgba(255,255,255,.2); border-radius:2px; }
+.apm-nav-item.on { background:var(--r); }
+
+.app-feat-list { display:flex; flex-direction:column; gap:10px; text-align:left; margin-top:4px; }
+.app-feat { display:flex; align-items:center; gap:12px; font-size:14px; color:rgba(255,255,255,.8); font-weight:600; }
+.app-feat-ic { font-size:18px; flex-shrink:0; }
+
+/* ══ TRANSFORMAÇÃO ═══════════════════════════════ */
+.transformation-section {
+  background: var(--creme); padding: 72px 0;
+}
+.before-after {
+  display: flex; gap: 14px; align-items: stretch;
+}
+.ba-col {
+  flex: 1; border-radius: 8px; overflow: hidden;
+  border: 1px solid rgba(192,20,63,.1);
+}
+.ba-header {
+  padding: 14px 18px; font-size: 13px; font-weight: 800;
+  letter-spacing: 1px; text-transform: uppercase;
+}
+.ba-header.before { background: rgba(100,50,60,.1); color: var(--txt2); }
+.ba-header.after  { background: var(--r); color: #fff; }
+.ba-body { padding: 18px; background: #fff; }
+.ba-item { display:flex; align-items:flex-start; gap:9px; font-size:13px; margin-bottom:11px; color:var(--txt2); line-height:1.5; }
+.ba-item:last-child { margin-bottom:0; }
+.ba-dot { width:14px; height:14px; border-radius:50%; flex-shrink:0; margin-top:2px; }
+.ba-dot.bad { background: rgba(150,80,90,.3); }
+.ba-dot.good { background: var(--r); }
+
+/* ══ FASES DO MÉTODO ════════════════════════════ */
+.fases-list { display:flex; flex-direction:column; gap:12px; }
+.fase-item {
+  display:flex; align-items:flex-start; gap:18px;
+  background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.07);
+  border-radius:8px; padding:20px 22px;
+  transition: background .2s, border-color .2s;
+}
+.fase-item:hover { background:rgba(192,20,63,.07); border-color:rgba(192,20,63,.2); }
+.fase-num {
+  width:44px; height:44px; border-radius:50%; background:var(--r);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--ff-titulo); font-size:20px; font-weight:700; color:#fff;
+  flex-shrink:0;
+}
+.fase-content strong { display:block; font-size:15px; font-weight:800; color:#fff; margin-bottom:5px; }
+.fase-content p { font-size:13px; color:rgba(255,255,255,.5); line-height:1.6; }
+.fase-result { font-size:12px; font-weight:700; color:var(--r); margin-top:8px; letter-spacing:.3px; }
+
+/* ══ DEPOIMENTOS ════════════════════════════════ */
+.depo-grid { display:flex; flex-direction:column; gap:14px; }
+.depo-card {
+  background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.07);
+  border-radius:8px; padding:24px;
+}
+.depo-stars { color:var(--ouro); font-size:13px; letter-spacing:2px; margin-bottom:12px; }
+.depo-txt { font-size:14px; color:rgba(255,255,255,.72); line-height:1.7; margin-bottom:14px; font-style:italic; }
+.depo-author { font-size:12px; font-weight:700; color:var(--ouro); letter-spacing:.5px; }
+
+/* ══ BÔNUS ══════════════════════════════════════ */
+.bonus-grid { display:flex; flex-direction:column; gap:14px; }
+.bonus-card {
+  display:flex; gap:18px; align-items:flex-start;
+  background:var(--branco); border:1px solid rgba(192,20,63,.1);
+  border-radius:8px; padding:20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+}
+.bonus-ic { width:52px; height:52px; border-radius:8px; background:rgba(192,20,63,.08); border:1px solid rgba(192,20,63,.15); display:flex; align-items:center; justify-content:center; font-size:24px; flex-shrink:0; }
+.bonus-card strong { display:block; font-size:14px; font-weight:800; color:var(--txt); margin-bottom:5px; }
+.bonus-card p { font-size:13px; color:var(--txt2); line-height:1.55; }
+.bonus-valor { display:inline-block; font-size:11px; font-weight:800; color:var(--r); margin-top:7px; letter-spacing:.3px; }
+.bonus-total-box {
+  background:rgba(192,20,63,.06); border:1px solid rgba(192,20,63,.18);
+  border-radius:8px; padding:22px; text-align:center; margin-top:8px;
+}
+.bonus-total-box p { font-size:13px; color:var(--txt2); margin-bottom:4px; }
+.bonus-total-box strong { font-size:26px; font-weight:900; color:var(--r); display:block; margin:4px 0; }
+.bonus-total-box span { font-size:14px; font-weight:700; color:var(--r); }
+
+/* ══ GARANTIA ═══════════════════════════════════ */
+.garantia-box {
+  background:var(--branco); border:1px solid rgba(192,20,63,.14);
+  border-radius:10px; padding:32px; display:flex; gap:24px; align-items:center;
+  box-shadow:0 4px 24px rgba(0,0,0,.07);
+}
+.garantia-ic {
+  width:84px; height:84px; flex-shrink:0; border-radius:50%;
+  background:linear-gradient(135deg, var(--r), var(--v));
+  display:flex; align-items:center; justify-content:center; font-size:36px;
+  box-shadow:0 8px 28px rgba(192,20,63,.35);
+}
+.garantia-box h3 { font-family:var(--ff-titulo); font-size:24px; font-weight:700; color:var(--txt); margin-bottom:7px; }
+.garantia-box p { font-size:13px; color:var(--txt2); line-height:1.65; }
+
+/* ══ OFERTA ══════════════════════════════════════ */
+.oferta-section { background:var(--escuro); padding:88px 0 100px; position:relative; overflow:hidden; }
+.oferta-section::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 600px 400px at 50% 50%, rgba(192,20,63,.12), transparent 70%); }
+.oferta-box {
+  border:1px solid rgba(192,20,63,.28); border-radius:12px; padding:48px 32px;
+  text-align:center; position:relative; z-index:1;
+  background:rgba(255,255,255,.02);
+}
+.oferta-title { font-family:var(--ff-titulo); font-size:clamp(22px,5.5vw,30px); font-weight:400; font-style:italic; color:rgba(255,255,255,.65); margin-bottom:28px; line-height:1.45; }
+.oferta-de { font-size:13px; color:rgba(255,255,255,.3); margin-bottom:8px; }
+.oferta-de s { color:rgba(255,255,255,.25); }
+.oferta-preco { margin-bottom:6px; }
+.oferta-preco sup { font-size:22px; font-weight:700; color:#fff; vertical-align:super; line-height:1; }
+.oferta-preco .big { font-family:var(--ff-titulo); font-size:82px; font-weight:900; color:#fff; line-height:1; }
+.oferta-preco .cents { font-size:30px; font-weight:900; color:#fff; vertical-align:super; }
+.oferta-desc { font-size:12px; color:rgba(255,255,255,.35); margin-bottom:30px; letter-spacing:.5px; }
+.oferta-includes { text-align:left; margin:0 auto 36px; max-width:360px; list-style:none; display:flex; flex-direction:column; gap:10px; }
+.oferta-includes li { display:flex; align-items:center; gap:12px; font-size:14px; color:rgba(255,255,255,.75); }
+.chk { width:22px; height:22px; border-radius:50%; background:var(--r); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.chk svg { width:11px; height:11px; stroke:#fff; stroke-width:2.5; fill:none; }
+.cta-oferta {
+  display:block; width:100%; max-width:420px; margin:0 auto;
+  background:linear-gradient(135deg,var(--r),#E0184A); color:#fff;
+  font-family:var(--ff-corpo); font-size:17px; font-weight:900;
+  letter-spacing:.5px; padding:20px 24px; border-radius:6px; border:none;
+  cursor:pointer; text-align:center; text-decoration:none;
+  box-shadow:0 8px 36px rgba(192,20,63,.6);
+  animation:pulse-glow 2.5s infinite; transition:transform .15s;
+}
+.cta-oferta:hover { transform:translateY(-2px); }
+.pm-row { display:flex; justify-content:center; gap:7px; flex-wrap:wrap; margin-top:16px; }
+.pm { background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.1); border-radius:4px; padding:5px 12px; font-size:11px; font-weight:700; color:rgba(255,255,255,.45); letter-spacing:.3px; }
+.safe-txt { font-size:11px; color:rgba(255,255,255,.28); margin-top:12px; letter-spacing:.3px; }
+
+/* ══ FAQ ═════════════════════════════════════════ */
+.faq-list { display:flex; flex-direction:column; gap:3px; }
+.faq-item { border:1px solid rgba(192,20,63,.1); border-radius:6px; overflow:hidden; }
+.faq-q {
+  width:100%; background:var(--branco); border:none; padding:18px 20px;
+  display:flex; align-items:center; justify-content:space-between; gap:14px;
+  cursor:pointer; font-family:var(--ff-corpo); font-size:14px; font-weight:700;
+  color:var(--txt); text-align:left; transition:background .2s;
+}
+.faq-q:hover { background:rgba(192,20,63,.04); }
+.faq-ic { width:22px; height:22px; border-radius:50%; background:var(--r); flex-shrink:0; display:flex; align-items:center; justify-content:center; transition:transform .3s; }
+.faq-ic svg { width:10px; height:10px; stroke:#fff; stroke-width:2.5; fill:none; transition:transform .3s; }
+.faq-a { max-height:0; overflow:hidden; transition:max-height .35s ease, padding .3s; background:rgba(192,20,63,.03); }
+.faq-item.open .faq-a { max-height:200px; }
+.faq-item.open .faq-ic svg { transform:rotate(45deg); }
+.faq-a-inner { padding:0 20px 18px; font-size:13px; color:var(--txt2); line-height:1.65; }
+
+/* ══ FLOATING BAR ═══════════════════════════════ */
+.float-bar {
+  position:fixed; bottom:0; left:0; right:0;
+  background:linear-gradient(135deg,var(--v),var(--v2));
+  border-top:1px solid rgba(192,20,63,.3);
+  padding:13px 20px; display:flex; align-items:center;
+  justify-content:space-between; gap:12px; z-index:999;
+  box-shadow:0 -6px 32px rgba(0,0,0,.45);
+}
+.fb-price strong { display:block; font-family:var(--ff-titulo); font-size:26px; font-weight:900; color:#fff; line-height:1; }
+.fb-price span { font-size:10px; font-weight:600; color:rgba(255,255,255,.45); letter-spacing:.5px; }
+.fb-btn {
+  background:var(--r); color:#fff; font-family:var(--ff-corpo);
+  font-size:14px; font-weight:800; padding:14px 22px; border-radius:5px;
+  border:none; cursor:pointer; white-space:nowrap; letter-spacing:.3px;
+  transition:background .2s;
+}
+.fb-btn:hover { background:var(--rd); }
+
+/* ══ FOOTER ══════════════════════════════════════ */
+.footer { background:var(--preto); padding:36px 0; text-align:center; padding-bottom:90px; }
+.footer p { font-size:11px; color:rgba(255,255,255,.2); line-height:1.8; margin-bottom:3px; }
+.footer a { color:rgba(255,255,255,.3); }
+
+/* ══ FADE-UP ═════════════════════════════════════ */
+.fu { opacity:0; transform:translateY(26px); transition:opacity .65s cubic-bezier(.16,1,.3,1), transform .65s cubic-bezier(.16,1,.3,1); }
+.fu.vis { opacity:1; transform:translateY(0); }
+.fu:nth-child(2){transition-delay:.1s}
+.fu:nth-child(3){transition-delay:.18s}
+.fu:nth-child(4){transition-delay:.26s}
+.fu:nth-child(5){transition-delay:.32s}
+
+/* ══ RESPONSIVE ══════════════════════════════════ */
+@media(max-width:500px){
+  .before-after{flex-direction:column}
+  .garantia-box{flex-direction:column;text-align:center}
+  .float-bar{gap:9px}
+  .fb-btn{font-size:13px;padding:13px 16px}
+  .app-preview{flex-direction:column;text-align:center}
+}
 </style>
 </head>
 <body>
 
-<!-- URGÊNCIA TOPO -->
-<div class="section-urgencia">
-  <p class="urgencia-texto">
-    <strong>⚡ OFERTA POR TEMPO LIMITADO</strong>
-    Acesso completo por apenas R$&nbsp;19,90
-  </p>
+<!-- ══ TIMER ════════════════════════════════════════ -->
+<div class="timer-bar">
+  <span class="timer-tag">Oferta Expira Em</span>
+  <div class="timer-units">
+    <div class="timer-unit"><span class="timer-num" id="t-h">02</span><span class="timer-lbl">Horas</span></div>
+    <span class="timer-sep">:</span>
+    <div class="timer-unit"><span class="timer-num" id="t-m">47</span><span class="timer-lbl">Min</span></div>
+    <span class="timer-sep">:</span>
+    <div class="timer-unit"><span class="timer-num" id="t-s">33</span><span class="timer-lbl">Seg</span></div>
+  </div>
+  <span class="timer-text">Após isso, o preço volta para R$ 97,00</span>
 </div>
 
-<!-- HERO -->
+<!-- ══ HERO ══════════════════════════════════════════ -->
 <section class="hero">
-  <div class="tag-top">✨ Método exclusivo para mulheres</div>
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      Método Exclusivo · Testado · Aprovado
+    </div>
+    <p class="hero-pretitle">Para mulheres que merecem ser valorizadas</p>
 
-  <div class="hero-pretitulo">Descubra o segredo que elas não contam</div>
+    <div class="book-cover">
+      <svg viewBox="0 0 200 270" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#6B0A22"/>
+            <stop offset="100%" stop-color="#2A0410"/>
+          </linearGradient>
+          <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#3D0614"/>
+            <stop offset="100%" stop-color="#5C0A1E"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="108" cy="263" rx="74" ry="5.5" fill="rgba(0,0,0,.55)"/>
+        <rect x="18" y="10" width="22" height="244" rx="3" fill="url(#g2)"/>
+        <rect x="36" y="6" width="155" height="252" rx="4" fill="url(#g1)"/>
+        <rect x="41" y="13" width="145" height="237" rx="2" fill="none" stroke="#B8902A" stroke-width=".7"/>
+        <line x1="49" y1="24" x2="178" y2="24" stroke="#B8902A" stroke-width=".4" opacity=".5"/>
+        <circle cx="113" cy="100" r="36" fill="rgba(192,20,63,.18)"/>
+        <circle cx="113" cy="100" r="24" fill="rgba(192,20,63,.28)"/>
+        <circle cx="113" cy="100" r="12" fill="rgba(192,20,63,.4)"/>
+        <text x="113" y="106" text-anchor="middle" font-family="Georgia,serif" font-size="16" font-weight="700" fill="rgba(255,255,255,.9)">💌</text>
+        <line x1="49" y1="143" x2="178" y2="143" stroke="#B8902A" stroke-width=".5" opacity=".45"/>
+        <text x="113" y="164" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="rgba(255,255,255,.5)" letter-spacing="3">MANUAL DA</text>
+        <text x="113" y="187" text-anchor="middle" font-family="Georgia,serif" font-size="21" font-weight="700" font-style="italic" fill="#fff">Mulher</text>
+        <text x="113" y="207" text-anchor="middle" font-family="Georgia,serif" font-size="13" font-weight="700" fill="#B8902A" letter-spacing="2.5">INESQUECÍVEL</text>
+        <line x1="49" y1="222" x2="178" y2="222" stroke="#B8902A" stroke-width=".5" opacity=".45"/>
+        <line x1="49" y1="229" x2="178" y2="229" stroke="#B8902A" stroke-width=".3" opacity=".25"/>
+        <rect x="36" y="6" width="9" height="252" rx="2" fill="rgba(255,255,255,.05)"/>
+      </svg>
+    </div>
 
-  <h1>Manual da Mulher <em>Inesquecível</em></h1>
+    <h1 class="hero-h1">Manual da<br><em>Mulher Inesquecível</em></h1>
+    <p class="hero-sub">
+      O sistema completo — <strong>eBook + Aplicativo com IA</strong> — para você fazer ele correr atrás, sentir sua falta e nunca mais conseguir te esquecer.
+    </p>
 
-  <p class="hero-sub">Faça ele correr atrás de você, se arrepender de ter perdido e nunca mais conseguir te esquecer — mesmo que pareça impossível agora.</p>
+    <div class="hero-stars">
+      <span class="stars-emojis">★★★★★</span>
+      <span class="stars-text">+2.400 mulheres transformadas</span>
+    </div>
 
-  <!-- Book cover SVG -->
-  <div class="book-visual">
-    <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="capa" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#7B0D2A"/>
-          <stop offset="100%" stop-color="#3D0A1E"/>
-        </linearGradient>
-        <linearGradient id="lateral" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stop-color="#4A0818"/>
-          <stop offset="100%" stop-color="#7B0D2A"/>
-        </linearGradient>
-      </defs>
-      <!-- Sombra -->
-      <ellipse cx="110" cy="248" rx="75" ry="8" fill="rgba(0,0,0,0.4)"/>
-      <!-- Lateral livro -->
-      <rect x="22" y="12" width="18" height="228" rx="2" fill="url(#lateral)"/>
-      <!-- Capa -->
-      <rect x="36" y="8" width="152" height="232" rx="4" fill="url(#capa)"/>
-      <!-- Ornamento superior -->
-      <rect x="46" y="18" width="132" height="1.5" rx="1" fill="rgba(201,147,42,0.6)"/>
-      <rect x="46" y="22" width="132" height="0.5" rx="1" fill="rgba(201,147,42,0.3)"/>
-      <!-- Título -->
-      <text x="112" y="70" text-anchor="middle" font-family="serif" font-size="11" font-weight="700" fill="#C9932A" letter-spacing="2">MANUAL DA</text>
-      <!-- Linha decorativa -->
-      <line x1="60" y1="78" x2="164" y2="78" stroke="rgba(201,147,42,0.5)" stroke-width="0.8"/>
-      <!-- Ornamento floral central -->
-      <text x="112" y="128" text-anchor="middle" font-size="40" fill="rgba(200,23,74,0.8)">✿</text>
-      <text x="112" y="128" text-anchor="middle" font-size="40" fill="rgba(255,255,255,0.1)">✿</text>
-      <!-- Mulher -->
-      <text x="112" y="160" text-anchor="middle" font-family="serif" font-style="italic" font-size="22" font-weight="900" fill="#FFFFFF">Mulher</text>
-      <!-- Linha -->
-      <line x1="60" y1="167" x2="164" y2="167" stroke="rgba(201,147,42,0.5)" stroke-width="0.8"/>
-      <!-- Inesquecível -->
-      <text x="112" y="192" text-anchor="middle" font-family="serif" font-size="13" fill="#C9932A" letter-spacing="1.5">INESQUECÍVEL</text>
-      <!-- Ornamento inferior -->
-      <rect x="46" y="208" width="132" height="0.5" rx="1" fill="rgba(201,147,42,0.3)"/>
-      <rect x="46" y="212" width="132" height="1.5" rx="1" fill="rgba(201,147,42,0.6)"/>
-      <!-- Spine detail -->
-      <rect x="22" y="115" width="18" height="2" fill="rgba(201,147,42,0.4)"/>
-    </svg>
+    <a href="#oferta" class="cta-main">QUERO MEU ACESSO COMPLETO AGORA →</a>
+    <p class="cta-safe">🔒 Pagamento 100% seguro · Acesso imediato após confirmação</p>
   </div>
-
 </section>
 
-<!-- DOR / IDENTIFICAÇÃO -->
-<section class="section-problema">
-  <h2>Você já se sentiu assim?</h2>
-
-  <div class="dor-item">
-    <div class="dor-icon">💔</div>
-    <p>Mandou mensagem e ficou esperando horas sem resposta — enquanto ele viu e não respondeu...</p>
+<!-- ══ PROVA SOCIAL ══════════════════════════════════ -->
+<div class="social-strip">
+  <div class="social-strip-inner">
+    <div class="social-stat"><span class="num">2.400+</span><span class="lbl">Mulheres transformadas</span></div>
+    <div class="social-divider"></div>
+    <div class="social-stat"><span class="num">97%</span><span class="lbl">Aprovação geral</span></div>
+    <div class="social-divider"></div>
+    <div class="social-stat"><span class="num">7 dias</span><span class="lbl">Garantia total</span></div>
+    <div class="social-divider"></div>
+    <div class="social-stat"><span class="num">R$ 19,90</span><span class="lbl">Investimento único</span></div>
   </div>
+</div>
 
-  <div class="dor-item">
-    <div class="dor-icon">😰</div>
-    <p>Deu tudo de você no relacionamento e mesmo assim ele foi embora como se você não valesse nada...</p>
-  </div>
-
-  <div class="dor-item">
-    <div class="dor-icon">😔</div>
-    <p>Tentou tudo para reconquistar ele e parece que quanto mais você corre, mais ele se afasta...</p>
-  </div>
-
-  <div class="dor-item">
-    <div class="dor-icon">😤</div>
-    <p>Fica vendo outras mulheres sendo valorizadas enquanto você sente que nunca é suficiente...</p>
-  </div>
-
-  <p style="font-size:15px;font-weight:700;color:var(--vinho);text-align:center;margin-top:24px;line-height:1.5;">
-    Você não é o problema. <br>Você apenas nunca te ensinou <em>como o jogo funciona.</em>
-  </p>
-</section>
-
-<!-- SOLUÇÃO -->
-<section class="section-solucao">
-  <h2>Chegou a hora de <span>mudar tudo isso</span> de uma vez por todas</h2>
-  <p class="solucao-sub">O Manual da Mulher Inesquecível reúne os métodos mais poderosos para você se tornar a mulher que nenhum homem consegue esquecer — e que qualquer um quer conquistar.</p>
-
-  <div class="modulo-card">
-    <div class="modulo-num">1</div>
-    <div class="modulo-texto">
-      <strong>Mensagens que fazem ele correr atrás de você</strong>
-      <p>As palavras exatas que ativam o instinto de perseguição dele — testadas e aprovadas.</p>
+<!-- ══ SEÇÃO DOR ═════════════════════════════════════ -->
+<section class="emotion-section">
+  <div class="container">
+    <div class="sec-head fu">
+      <span class="sec-badge light">Você se reconhece aqui?</span>
+      <h2 class="sec-titulo light" style="margin-top:12px;">Eu sei exatamente<br>como você está se sentindo</h2>
+      <p class="sec-sub light" style="margin-top:10px;">Porque milhares de mulheres vivem o mesmo ciclo — e nunca ninguém as ensinou a sair dele.</p>
     </div>
-  </div>
 
-  <div class="modulo-card">
-    <div class="modulo-num">2</div>
-    <div class="modulo-texto">
-      <strong>Como fazer ele se arrepender de ter perdido</strong>
-      <p>O passo a passo psicológico para ele perceber o erro que cometeu ao te perder.</p>
+    <div class="emotion-grid">
+      <div class="emotion-card fu">
+        <div class="ec-icon red">💔</div>
+        <div class="ec-text">
+          <strong>Você deu tudo — e ainda assim ele foi embora</strong>
+          <p>Você amou de verdade, se dedicou, abriu mão de muita coisa. E mesmo assim sentiu que nunca foi suficiente.</p>
+        </div>
+      </div>
+      <div class="emotion-card fu">
+        <div class="ec-icon red">📱</div>
+        <div class="ec-text">
+          <strong>Você fica esperando a resposta que nunca vem</strong>
+          <p>Você vê o "visualizado" e o coração aperta. Você relê a mensagem várias vezes tentando entender o que fez de errado.</p>
+        </div>
+      </div>
+      <div class="emotion-card fu">
+        <div class="ec-icon red">😔</div>
+        <div class="ec-text">
+          <strong>Você tentou tudo — e a distância só aumentou</strong>
+          <p>Cada tentativa de se aproximar parece afastá-lo ainda mais. E você começa a acreditar que o problema é você.</p>
+        </div>
+      </div>
+      <div class="emotion-card fu">
+        <div class="ec-icon red">👀</div>
+        <div class="ec-text">
+          <strong>Você vê outras mulheres sendo valorizadas e não entende o porquê</strong>
+          <p>Elas não são melhores que você. Mas elas sabem algo que ninguém te contou ainda.</p>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="modulo-card">
-    <div class="modulo-num">3</div>
-    <div class="modulo-texto">
-      <strong>O jogo da atração — mensagens que viciam</strong>
-      <p>Como criar uma dependência emocional saudável através de conversas estratégicas.</p>
-    </div>
-  </div>
-
-  <div class="modulo-card">
-    <div class="modulo-num">4</div>
-    <div class="modulo-texto">
-      <strong>Nunca mais fique sem resposta</strong>
-      <p>Técnicas infalíveis para ele sempre querer responder — e sempre iniciar conversa com você.</p>
-    </div>
-  </div>
-
-  <div class="modulo-card">
-    <div class="modulo-num">5</div>
-    <div class="modulo-texto">
-      <strong>Do vácuo à saudade em 7 dias</strong>
-      <p>Um plano de 7 dias que transforma silêncio total em ele te mandando mensagem implorando atenção.</p>
+    <div class="reveal-block fu">
+      <p>
+        O problema não é você.<br>
+        O problema é que ninguém te ensinou<br>
+        <strong>como o jogo realmente funciona.</strong><br><br>
+        E neste método, você vai aprender<br>
+        <em>exatamente como virar esse jogo.</em>
+      </p>
     </div>
   </div>
 </section>
 
-<!-- BÔNUS -->
-<section class="section-bonus">
-  <div class="bonus-tag">🎁 BÔNUS EXCLUSIVOS</div>
-  <h2>Você também leva de graça:</h2>
-
-  <div class="bonus-item">
-    <div class="bonus-icon-wrap">📱</div>
-    <div class="bonus-info">
-      <strong>App de Mensagens Prontas</strong>
-      <p>Mais de 200 mensagens prontas para qualquer situação — só copiar e enviar.</p>
-      <span class="bonus-valor">Valor: R$ 47,00 — GRÁTIS</span>
+<!-- ══ ANTES E DEPOIS ════════════════════════════════ -->
+<section class="transformation-section">
+  <div class="container">
+    <div class="sec-head fu">
+      <span class="sec-badge">A Transformação</span>
+      <h2 class="sec-titulo" style="margin-top:12px;">Do ciclo que te esgota<br><em>para o poder que você merece</em></h2>
     </div>
-  </div>
-
-  <div class="bonus-item">
-    <div class="bonus-icon-wrap">💘</div>
-    <div class="bonus-info">
-      <strong>Dicas Para Conquistar o Homem que Quiser</strong>
-      <p>Os segredos para despertar interesse em qualquer homem, do jeito certo.</p>
-      <span class="bonus-valor">Valor: R$ 37,00 — GRÁTIS</span>
-    </div>
-  </div>
-
-  <div class="bonus-item">
-    <div class="bonus-icon-wrap">👑</div>
-    <div class="bonus-info">
-      <strong>Dicas Infalíveis: A Mulher Inesquecível</strong>
-      <p>Como se tornar aquela mulher que marcou a vida de todo homem que passou por ela.</p>
-      <span class="bonus-valor">Valor: R$ 27,00 — GRÁTIS</span>
-    </div>
-  </div>
-
-  <div style="margin-top:20px;padding:16px;background:#FFF0F4;border-radius:12px;text-align:center;">
-    <p style="font-size:12px;color:var(--cinza);margin-bottom:6px;">Valor total dos bônus:</p>
-    <p style="font-size:22px;font-weight:900;color:var(--vinho);">R$ 111,00 em bônus</p>
-    <p style="font-size:14px;font-weight:800;color:var(--rosa);">completamente GRÁTIS para você</p>
-  </div>
-</section>
-
-<!-- DEPOIMENTOS -->
-<section class="section-prova">
-  <h2>O que elas estão dizendo:</h2>
-
-  <div class="depo-card">
-    <div class="depo-stars">★★★★★</div>
-    <p class="depo-texto">"Em 5 dias ele me mandou mensagem pedindo desculpa e querendo me ver. Não acreditei que funcionou tão rápido! O método do vácuo é incrível."</p>
-    <p class="depo-nome">— Camila R., 26 anos</p>
-  </div>
-
-  <div class="depo-card">
-    <div class="depo-stars">★★★★★</div>
-    <p class="depo-texto">"Aplicou as mensagens do app e ele literalmente parou o que estava fazendo pra me responder. Nunca fui tão valorizada assim."</p>
-    <p class="depo-nome">— Fernanda M., 31 anos</p>
-  </div>
-
-  <div class="depo-card">
-    <div class="depo-stars">★★★★★</div>
-    <p class="depo-texto">"Achei que era mais um livro de autoajuda. Mas é completamente prático. Mudou minha autoestima e meu relacionamento ao mesmo tempo."</p>
-    <p class="depo-nome">— Juliana P., 28 anos</p>
-  </div>
-</section>
-
-<!-- GARANTIA -->
-<section class="section-garantia">
-  <div class="garantia-badge">🛡️</div>
-  <h2>Garantia de 7 dias</h2>
-  <p>Se você aplicar o método e não sentir diferença nenhuma em 7 dias, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia. Nenhum risco para você.</p>
-</section>
-
-<!-- OFERTA PRINCIPAL -->
-<section class="section-oferta">
-  <p class="oferta-titulo">Tudo isso por um único pagamento de:</p>
-
-  <div class="oferta-box">
-    <p class="de-por">De <s>R$ 97,00</s> por apenas:</p>
-    <p class="preco-principal"><sup>R$</sup>19<span style="font-size:32px">,90</span></p>
-    <p class="preco-descricao">pagamento único • acesso imediato</p>
-
-    <div class="itens-oferta">
-      <div class="item-oferta"><div class="check-icon">✓</div> Manual da Mulher Inesquecível (eBook)</div>
-      <div class="item-oferta"><div class="check-icon">✓</div> App de Mensagens Prontas</div>
-      <div class="item-oferta"><div class="check-icon">✓</div> Como Conquistar o Homem que Quiser</div>
-      <div class="item-oferta"><div class="check-icon">✓</div> Dicas Infalíveis da Mulher Inesquecível</div>
-      <div class="item-oferta"><div class="check-icon">✓</div> Garantia de 7 dias</div>
-    </div>
-
-    <a href="#" class="btn-comprar">QUERO MEU ACESSO AGORA →</a>
-    <p class="btn-subtexto">🔒 Compra 100% segura e protegida</p>
-
-    <div class="pagamento-icons">
-      <span class="pag-badge">Pix</span>
-      <span class="pag-badge">Cartão</span>
-      <span class="pag-badge">Boleto</span>
+    <div class="before-after fu">
+      <div class="ba-col">
+        <div class="ba-header before">ANTES do Método</div>
+        <div class="ba-body">
+          <div class="ba-item"><span class="ba-dot bad"></span>Corre atrás e não é valorizada</div>
+          <div class="ba-item"><span class="ba-dot bad"></span>Fica esperando mensagens que não chegam</div>
+          <div class="ba-item"><span class="ba-dot bad"></span>Implora atenção e recebe distância</div>
+          <div class="ba-item"><span class="ba-dot bad"></span>Se sente descartável e substituível</div>
+          <div class="ba-item"><span class="ba-dot bad"></span>Entrega tudo e recebe pouco de volta</div>
+        </div>
+      </div>
+      <div class="ba-col">
+        <div class="ba-header after">DEPOIS do Método</div>
+        <div class="ba-body">
+          <div class="ba-item"><span class="ba-dot good"></span>Ele corre atrás — sem você pedir</div>
+          <div class="ba-item"><span class="ba-dot good"></span>As mensagens chegam por iniciativa dele</div>
+          <div class="ba-item"><span class="ba-dot good"></span>Você desperta admiração e desejo reais</div>
+          <div class="ba-item"><span class="ba-dot good"></span>Você se torna aquela que ele não consegue esquecer</div>
+          <div class="ba-item"><span class="ba-dot good"></span>Você tem o controle emocional da relação</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="section-faq">
-  <h2>Perguntas frequentes</h2>
+<!-- ══ O QUE ESTÁ INCLUÍDO ══════════════════════════ -->
+<section class="s-creme">
+  <div class="container">
+    <div class="sec-head fu">
+      <span class="sec-badge">O Que Você Recebe</span>
+      <h2 class="sec-titulo" style="margin-top:12px;">Um sistema completo.<br><em>Não apenas um eBook.</em></h2>
+      <p class="sec-sub" style="margin-top:10px;">Você não vai receber só um arquivo PDF. Você vai receber um sistema de transformação com conteúdo, ferramenta prática e suporte através da IA.</p>
+    </div>
 
-  <div class="faq-item">
-    <p class="faq-pergunta">Como vou receber o produto?</p>
-    <p class="faq-resposta">Imediatamente após o pagamento você recebe acesso por e-mail ao eBook em PDF e ao aplicativo. Pode acessar de qualquer celular ou computador.</p>
-  </div>
+    <div class="product-showcase">
 
-  <div class="faq-item">
-    <p class="faq-pergunta">Funciona mesmo se ele me ignorou completamente?</p>
-    <p class="faq-resposta">Sim. O método foi desenvolvido exatamente para situações de silêncio total. O módulo "Do vácuo à saudade em 7 dias" é específico para esse caso.</p>
-  </div>
+      <!-- EBOOK -->
+      <div class="product-card fu">
+        <div class="product-card-header">
+          <div class="pch-icon">📖</div>
+          <div class="pch-info">
+            <strong>eBook — Manual da Mulher Inesquecível</strong>
+            <span>Conteúdo completo em PDF · Leitura em qualquer dispositivo</span>
+          </div>
+        </div>
+        <div class="product-card-body">
+          <p>O guia definitivo com o método completo, dividido em capítulos práticos que você aplica imediatamente — mesmo que o relacionamento pareça sem saída.</p>
+          <ul class="feature-list">
+            <li><span class="feat-check"><svg viewBox="0 0 10 10"><polyline points="2,5.5 4.5,8 9,2"/></svg></span>Os 3 erros que afastam qualquer homem — e como parar agora</li>
+            <li><span class="feat-check"><svg viewBox="0 0 10 10"><polyline points="2,5.5 4.5,8 9,2"/></svg></span>O conceito de Energia de Escassez Feminina</li>
+            <li><span class="feat-check"><svg viewBox="0 0 10 10"><polyline points="2,5.5 4.5,8 9,2"/></svg></span>O Método de 4 Fases com passo a passo completo</li>
+            <li><span class="feat-check"><svg viewBox="0 0 10 10"><polyline points="2,5.5 4.5,8 9,2"/></svg></span>Como criar ausência estratégica que gera saudade real</li>
+            <li><span class="feat-check"><svg viewBox="0 0 10 10"><polyline points="2,5.5 4.5,8 9,2"/></svg></span>O segredo do posicionamento que muda tudo</li>
+          </ul>
+        </div>
+      </div>
 
-  <div class="faq-item">
-    <p class="faq-pergunta">E se eu não gostar? Tem garantia?</p>
-    <p class="faq-resposta">Tem sim. Se em até 7 dias você não ficar satisfeita, devolvemos 100% do seu dinheiro. Sem perguntas.</p>
-  </div>
+      <!-- APP -->
+      <div class="product-card fu" style="border-color:rgba(192,20,63,.3);">
+        <div class="product-card-header" style="background:linear-gradient(135deg,#8A0A2B,#3D0614);">
+          <div class="pch-icon" style="background:rgba(192,20,63,.4);">📱</div>
+          <div class="pch-info">
+            <strong>Aplicativo Exclusivo com Inteligência Artificial</strong>
+            <span>Instalável no celular · Funciona como app nativo · Com IA embutida</span>
+          </div>
+        </div>
+        <div class="product-card-body">
+          <p>Não é só um aplicativo de mensagens. É um assistente pessoal de relacionamentos que conversa com você, entende sua situação e te guia em tempo real.</p>
+          <div class="app-preview">
+            <div class="app-screen">
+              <div class="app-screen-inner">
+                <div class="app-bar"></div>
+                <div class="app-item accent"></div>
+                <div class="app-item"></div>
+                <div class="app-item short"></div>
+                <div class="app-item accent"></div>
+                <div class="app-item short"></div>
+                <div class="app-item"></div>
+              </div>
+              <div class="app-dots"><div class="app-dot on"></div><div class="app-dot"></div><div class="app-dot"></div><div class="app-dot"></div></div>
+            </div>
+            <div class="app-info">
+              <strong>Tudo no seu celular</strong>
+              <p>Chat com IA, mensagens prontas, plano de 7 dias, dicas de beleza, estilo e muito mais.</p>
+              <span class="app-badge">INSTALÁVEL · COMO APP NATIVO</span>
+            </div>
+          </div>
+          <ul class="feature-list" style="margin-top:18px;">
+            <li><span class="feat-check"><svg viewBox="0 0 10 10"><polyline points="2,5.5 4.5,8 9,2"/></svg></span>Chat com IA que responde suas dúvidas e te ajuda em tempo real</li>
+            <li><span class="feat-check"><svg viewBox="0 0 10 10"><polyline points="2,5.5 4.5,8 9,2"/></svg></span>+200 mensagens prontas organizadas por situação</li>
+            <li><span class="feat-check"><svg viewBox="0 0 10 10"><polyline points="2,5.5 4.5,8 9,2"/></svg></span>Plano de 7 dias com acompanhamento diário</li>
+            <li><span class="feat-check"><svg viewBox="0 0 10 10"><polyline points="2,5.5 4.5,8 9,2"/></svg></span>Reflexão, mensagem e dica personalizadas todo dia</li>
+            <li><span class="feat-check"><svg viewBox="0 0 10 10"><polyline points="2,5.5 4.5,8 9,2"/></svg></span>Dicas de beleza, estilo e primeiro encontro</li>
+          </ul>
+        </div>
+      </div>
 
-  <div class="faq-item">
-    <p class="faq-pergunta">Posso usar mesmo sem estar em um relacionamento?</p>
-    <p class="faq-resposta">Pode! O material foi feito tanto para quem quer reconquistar quanto para quem quer se tornar mais atraente e se relacionar melhor.</p>
+    </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ══ APP DESTAQUE ══════════════════════════════════ -->
+<section class="s-escuro">
+  <div class="container">
+    <div class="sec-head fu">
+      <span class="sec-badge light">Exclusivo neste Método</span>
+      <h2 class="sec-titulo light" style="margin-top:12px;">Um aplicativo que<br><em>fica do seu lado 24h</em></h2>
+      <p class="sec-sub light" style="margin-top:10px;">Você não vai ficar sozinha com as suas dúvidas. O app tem uma IA que conversa com você, entende sua situação e te diz exatamente o que fazer.</p>
+    </div>
+
+    <div class="app-highlight fu">
+      <div class="app-highlight-inner">
+        <div class="app-phone-mock">
+          <div class="apm-header">
+            <div class="apm-logo"></div>
+            <div class="apm-title"></div>
+          </div>
+          <div class="apm-content">
+            <div class="apm-card"><div class="apm-card-t"></div><div class="apm-card-b"></div></div>
+            <div class="apm-msg"><div class="apm-msg-line"></div><div class="apm-msg-line"></div><div class="apm-msg-line"></div></div>
+            <div class="apm-card"><div class="apm-card-t"></div><div class="apm-card-b"></div></div>
+            <div class="apm-msg"><div class="apm-msg-line"></div><div class="apm-msg-line"></div></div>
+          </div>
+          <div class="apm-nav">
+            <div class="apm-nav-item on"></div>
+            <div class="apm-nav-item"></div>
+            <div class="apm-nav-item"></div>
+            <div class="apm-nav-item"></div>
+            <div class="apm-nav-item"></div>
+          </div>
+        </div>
+
+        <div class="app-feat-list">
+          <div class="app-feat"><span class="app-feat-ic">🤖</span>IA que conversa e aconselha em tempo real</div>
+          <div class="app-feat"><span class="app-feat-ic">💬</span>Mensagens prontas para cada situação</div>
+          <div class="app-feat"><span class="app-feat-ic">📅</span>Plano de 7 dias com guia diário</div>
+          <div class="app-feat"><span class="app-feat-ic">✨</span>Dicas de beleza, estilo e postura</div>
+          <div class="app-feat"><span class="app-feat-ic">🗺️</span>Sugestões de lugares por cidade e humor</div>
+          <div class="app-feat"><span class="app-feat-ic">📲</span>Instala direto no celular como app</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MÉTODO — 4 FASES ══════════════════════════════ -->
+<section class="s-escuro2">
+  <div class="container">
+    <div class="sec-head fu">
+      <span class="sec-badge light">O Método</span>
+      <h2 class="sec-titulo light" style="margin-top:12px;">4 fases que mudam<br><em>tudo em 7 dias</em></h2>
+    </div>
+    <div class="fases-list">
+      <div class="fase-item fu">
+        <div class="fase-num">1</div>
+        <div class="fase-content">
+          <strong>Silêncio Estratégico</strong>
+          <p>Você para de correr atrás, desaparece emocionalmente e cria a quebra de padrão que desperta a curiosidade dele imediatamente.</p>
+          <span class="fase-result">→ Ele começa a notar sua ausência e se perguntar onde você está</span>
+        </div>
+      </div>
+      <div class="fase-item fu">
+        <div class="fase-num">2</div>
+        <div class="fase-content">
+          <strong>Reposicionamento</strong>
+          <p>Você investe em si mesma, aparece melhor, mostra uma vida interessante — e se torna alguém que ele sente que está perdendo.</p>
+          <span class="fase-result">→ Sua presença muda de carente para desejada</span>
+        </div>
+      </div>
+      <div class="fase-item fu">
+        <div class="fase-num">3</div>
+        <div class="fase-content">
+          <strong>Reativação</strong>
+          <p>Você retorna com respostas curtas, sem emoção exagerada, sem disponibilidade total. Ele percebe o que estava perdendo.</p>
+          <span class="fase-result">→ Ele começa a investir novamente — por vontade própria</span>
+        </div>
+      </div>
+      <div class="fase-item fu">
+        <div class="fase-num">4</div>
+        <div class="fase-content">
+          <strong>Controle Emocional</strong>
+          <p>Você mantém o equilíbrio, nunca demonstra dependência e sustenta seu valor. Ele corre atrás — e você decide o ritmo.</p>
+          <span class="fase-result">→ Você tem o controle real da situação</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DEPOIMENTOS ════════════════════════════════════ -->
+<section class="s-escuro">
+  <div class="container">
+    <div class="sec-head fu">
+      <span class="sec-badge light">Resultados Reais</span>
+      <h2 class="sec-titulo light" style="margin-top:12px;">O que elas estão dizendo</h2>
+    </div>
+    <div class="depo-grid">
+      <div class="depo-card fu">
+        <div class="depo-stars">★★★★★</div>
+        <p class="depo-txt">"Em 5 dias ele me mandou mensagem pedindo desculpa e querendo me ver. Não acreditei que funcionou tão rápido. O módulo do silêncio estratégico mudou tudo. Nunca tinha visto isso explicado de forma tão prática."</p>
+        <div class="depo-author">— Camila R., 26 anos · São Paulo</div>
+      </div>
+      <div class="depo-card fu">
+        <div class="depo-stars">★★★★★</div>
+        <p class="depo-txt">"O aplicativo é incrível. Eu usava as mensagens prontas e o chat com a IA me ajudou a entender o que fazer em cada situação. Ele literalmente parou o que estava fazendo para me responder. Nunca fui tão valorizada."</p>
+        <div class="depo-author">— Fernanda M., 31 anos · Rio de Janeiro</div>
+      </div>
+      <div class="depo-card fu">
+        <div class="depo-stars">★★★★★</div>
+        <p class="depo-txt">"Achei que era mais um livro de autoajuda genérico. Mas é completamente diferente. É prático, direto, com exemplos reais. Mudou minha autoestima e meu relacionamento ao mesmo tempo. Vale muito mais do que o preço."</p>
+        <div class="depo-author">— Juliana P., 28 anos · Curitiba</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BÔNUS ═════════════════════════════════════════ -->
+<section class="s-creme">
+  <div class="container">
+    <div class="sec-head fu">
+      <span class="sec-badge">Bônus Exclusivos</span>
+      <h2 class="sec-titulo" style="margin-top:12px;">Você ainda leva<br><em>de graça</em></h2>
+    </div>
+    <div class="bonus-grid">
+      <div class="bonus-card fu">
+        <div class="bonus-ic">📱</div>
+        <div>
+          <strong>App de Mensagens Prontas</strong>
+          <p>Mais de 200 mensagens prontas para você copiar e enviar. Organizadas por situação: reconquista, primeiro contato, como reagir, silêncio estratégico e muito mais.</p>
+          <span class="bonus-valor">Valor: R$ 47,00 · GRÁTIS para você</span>
+        </div>
+      </div>
+      <div class="bonus-card fu">
+        <div class="bonus-ic">💘</div>
+        <div>
+          <strong>Como Conquistar o Homem que Você Quer</strong>
+          <p>Os segredos para despertar interesse em qualquer homem de forma natural, sem artifícios ou jogos. Inclui os primeiros passos do zero.</p>
+          <span class="bonus-valor">Valor: R$ 37,00 · GRÁTIS para você</span>
+        </div>
+      </div>
+      <div class="bonus-card fu">
+        <div class="bonus-ic">👑</div>
+        <div>
+          <strong>Guia da Mulher Inesquecível</strong>
+          <p>Como se tornar aquela mulher que marcou a vida de todo homem que passou por ela. Postura, limites e o que realmente faz uma mulher ser inesquecível.</p>
+          <span class="bonus-valor">Valor: R$ 27,00 · GRÁTIS para você</span>
+        </div>
+      </div>
+    </div>
+    <div class="bonus-total-box fu">
+      <p>Valor total dos bônus</p>
+      <strong>R$ 111,00</strong>
+      <span>completamente GRÁTIS pra você hoje</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GARANTIA ══════════════════════════════════════ -->
+<section class="s-branco">
+  <div class="container">
+    <div class="garantia-box fu">
+      <div class="garantia-ic">🛡️</div>
+      <div>
+        <h3>Garantia de 7 Dias</h3>
+        <p>Se você aplicar o método e não sentir nenhuma diferença em 7 dias, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia, sem complicação. O risco é inteiramente nosso — não o seu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ OFERTA ════════════════════════════════════════ -->
+<section class="oferta-section" id="oferta">
+  <div class="container">
+    <div class="oferta-box fu">
+      <p class="oferta-title">Invista em você.<br>O resultado vai durar a vida inteira.</p>
+      <p class="oferta-de">De <s>R$ 97,00</s> por apenas:</p>
+      <div class="oferta-preco">
+        <sup>R$</sup><span class="big">19</span><span class="cents">,90</span>
+      </div>
+      <p class="oferta-desc">PAGAMENTO ÚNICO · ACESSO IMEDIATO · VITALÍCIO</p>
+
+      <ul class="oferta-includes">
+        <li><span class="chk"><svg viewBox="0 0 11 11"><polyline points="2,5.5 4.5,8 9,2"/></svg></span>eBook Manual da Mulher Inesquecível (PDF completo)</li>
+        <li><span class="chk"><svg viewBox="0 0 11 11"><polyline points="2,5.5 4.5,8 9,2"/></svg></span>Aplicativo com Inteligência Artificial</li>
+        <li><span class="chk"><svg viewBox="0 0 11 11"><polyline points="2,5.5 4.5,8 9,2"/></svg></span>+200 Mensagens Prontas por Situação</li>
+        <li><span class="chk"><svg viewBox="0 0 11 11"><polyline points="2,5.5 4.5,8 9,2"/></svg></span>Bônus: Como Conquistar o Homem que Você Quer</li>
+        <li><span class="chk"><svg viewBox="0 0 11 11"><polyline points="2,5.5 4.5,8 9,2"/></svg></span>Bônus: Guia da Mulher Inesquecível</li>
+        <li><span class="chk"><svg viewBox="0 0 11 11"><polyline points="2,5.5 4.5,8 9,2"/></svg></span>Garantia de 7 dias · Risco zero</li>
+      </ul>
+
+      <a href="#" class="cta-oferta">QUERO MEU ACESSO COMPLETO POR R$ 19,90 →</a>
+      <p class="safe-txt" style="margin-top:14px;">🔒 Ambiente seguro · Dados protegidos · Acesso em menos de 2 minutos</p>
+      <div class="pm-row">
+        <span class="pm">Pix</span>
+        <span class="pm">Cartão de Crédito</span>
+        <span class="pm">Boleto</span>
+        <span class="pm">Parcelado</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ═══════════════════════════════════════════ -->
+<section class="s-branco">
+  <div class="container">
+    <div class="sec-head fu">
+      <h2 class="sec-titulo">Perguntas frequentes</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)">
+          Como funciona o acesso ao produto?
+          <span class="faq-ic"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Imediatamente após a confirmação do pagamento, você recebe o acesso por e-mail. O eBook está em formato PDF e o aplicativo funciona direto no navegador do celular — e pode ser instalado na tela inicial como um app nativo. Sem necessidade de App Store ou Google Play.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)">
+          Funciona mesmo que ele esteja me ignorando completamente?
+          <span class="faq-ic"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Sim. O método foi desenvolvido especialmente para situações de silêncio total. A Fase 1 — Silêncio Estratégico — é exatamente para quem está sendo ignorada. É uma das partes mais elogiadas do método.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)">
+          O aplicativo é instalado em qual loja?
+          <span class="faq-ic"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">O aplicativo é um PWA (Progressive Web App), que funciona direto no navegador e pode ser instalado na tela inicial do seu celular com um único toque — sem precisar da App Store ou Google Play. Funciona no iPhone e no Android.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)">
+          Posso usar se não estiver em um relacionamento?
+          <span class="faq-ic"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Pode sim. O conteúdo foi criado tanto para reconquista quanto para quem quer atrair alguém novo, melhorar um relacionamento existente ou simplesmente se tornar uma mulher mais segura, valorizada e inesquecível.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)">
+          E se eu não gostar? Como funciona a garantia?
+          <span class="faq-ic"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Você tem 7 dias para pedir o reembolso completo, sem nenhuma justificativa. 100% do seu dinheiro de volta, sem burocracia. O risco é inteiramente nosso.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer class="footer">
-  <p>© 2025 Manual da Mulher Inesquecível. Todos os direitos reservados.</p>
-  <p>Este produto é um eBook digital entregue por e-mail. Os resultados podem variar de pessoa para pessoa.</p>
-  <p><a href="#" style="color:#5A3A47;">Política de Privacidade</a> · <a href="#" style="color:#5A3A47;">Termos de Uso</a></p>
+  <div class="container">
+    <p>© 2025 Manual da Mulher Inesquecível. Todos os direitos reservados.</p>
+    <p>Este produto é um material digital entregue por e-mail após a confirmação do pagamento.</p>
+    <p>Os resultados podem variar conforme cada pessoa e a consistência na aplicação do método.</p>
+    <p style="margin-top:10px;"><a href="#">Política de Privacidade</a> &nbsp;·&nbsp; <a href="#">Termos de Uso</a> &nbsp;·&nbsp; <a href="#">Contato</a></p>
+  </div>
 </footer>
 
-<!-- Espaçamento para o botão flutuante -->
-<div style="height: 76px;"></div>
-
-<!-- BOTÃO FLUTUANTE FIXO -->
-<div class="floating-cta">
-  <div class="floating-preco">
-    <span>Acesso completo</span>
-    R$ 19,90
-  </div>
-  <a href="#" class="floating-btn">QUERO AGORA →</a>
+<div class="float-bar">
+  <div class="fb-price"><span>Acesso completo</span><strong>R$ 19,90</strong></div>
+  <a href="#oferta" class="fb-btn">QUERO AGORA →</a>
 </div>
 
 <script>
-  document.querySelectorAll('.faq-item').forEach(item => {
-    item.addEventListener('click', () => {
-      item.classList.toggle('open');
-    });
-  });
+/* TIMER */
+(function(){
+  var end = Date.now() + (2*3600 + 47*60 + 33)*1000;
+  function tick(){
+    var diff = Math.max(0, end - Date.now());
+    var h = Math.floor(diff/3600000);
+    var m = Math.floor((diff%3600000)/60000);
+    var s = Math.floor((diff%60000)/1000);
+    document.getElementById('t-h').textContent = String(h).padStart(2,'0');
+    document.getElementById('t-m').textContent = String(m).padStart(2,'0');
+    document.getElementById('t-s').textContent = String(s).padStart(2,'0');
+    if(diff>0) requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* FAQ */
+function faq(btn){
+  var item = btn.closest('.faq-item');
+  var open = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
+  if(!open) item.classList.add('open');
+}
+
+/* FADE-UP */
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('vis'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fu').forEach(function(el){ io.observe(el); });
 </script>
 </body>
 </html>
